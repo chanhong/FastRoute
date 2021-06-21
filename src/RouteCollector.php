@@ -50,6 +50,18 @@ class RouteCollector
     }
 
     /**
+     * Adds a fallback route to the collection
+     *
+     * This is simply an alias of $this->addRoute('*', $route, $handler)
+     *
+     * @param mixed $handler
+     */
+    public function any(string $route, $handler): void
+    {
+        $this->addRoute('*', $route, $handler);
+    }
+
+    /**
      * Adds a GET route to the collection
      *
      * This is simply an alias of $this->addRoute('GET', $route, $handler)
@@ -136,7 +148,7 @@ class RouteCollector
     /**
      * Returns the collected route data, as provided by the data generator.
      *
-     * @return mixed[]
+     * @return array{0: array<string, array<string, mixed>>, 1: array<string, array<array{regex: string, suffix?: string, routeMap: array<int|string, array{0: mixed, 1: array<string, string>}>}>>}
      */
     public function getData(): array
     {

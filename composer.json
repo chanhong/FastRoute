@@ -17,13 +17,16 @@
     },
     "require-dev": {
         "doctrine/coding-standard": "^9.0",
-        "phpbench/phpbench": "^1.0@beta",
+        "phpbench/phpbench": "^1.0",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.12",
         "phpstan/phpstan-deprecation-rules": "^0.12",
         "phpstan/phpstan-phpunit": "^0.12",
         "phpstan/phpstan-strict-rules": "^0.12",
         "phpunit/phpunit": "^9.5"
+    },
+    "suggest": {
+        "ext-apcu": "To be able to use APCu cache driver"
     },
     "config": {
         "preferred-install": "dist",
